@@ -15,7 +15,7 @@ public class BinarySearchTree {
 	/**
 	 * Updates the level of a node based on the levels
 	 * of the left and right children.
-	 * 
+	 *
 	 * @param currentRoot Node that will have its level updated.
 	 */
 	private void updateLevel(Node currentRoot) {
@@ -24,9 +24,9 @@ public class BinarySearchTree {
 	/**
 	 * Calculates the height skew of a node based on the levels
 	 * of the left and right children.
-	 * 
+	 *
 	 * @param currentRoot Node that will have its height skew calculated.
-	 * 
+	 *
 	 * @return The height skew: the difference between the right subtree's level
 	 *         minus the left subtree's level. Note that this is:
 	 *         - a positive number if the right subtree has a higher level;
@@ -38,9 +38,9 @@ public class BinarySearchTree {
 
 	/**
 	 * Performs a left-side rotation around a top (parent) node and a pivot.
-	 * 
+	 *
 	 * We expect that pivot is the right child of the top (parent) node.
-	 * 
+	 *
 	 * @param top The top (parent) node.
 	 * @param pivot The pivot node.
 	 */
@@ -49,9 +49,9 @@ public class BinarySearchTree {
 
 	/**
 	 * Performs a right-side rotation around a top (parent) node and a pivot.
-	 * 
+	 *
 	 * We expect that pivot is the left child of the top (parent) node.
-	 * 
+	 *
 	 * @param top The top (parent) node.
 	 * @param pivot The pivot node.
 	 */
@@ -61,7 +61,7 @@ public class BinarySearchTree {
 	/**
 	 * Rebalances a node by checking the height skew and performing
 	 * the appropriate rotations if necessary.
-	 * 
+	 *
 	 * @param currentRoot Node to be rebalanced.
 	 */
 	void rebalance(Node currentRoot) {
@@ -69,9 +69,9 @@ public class BinarySearchTree {
 
 	/**
 	 * Adds an element into the tree.
-	 * 
+	 *
 	 * @param value The element to be inserted in the tree.
-	 * 
+	 *
 	 * @return True if the element was inserted; false if the value was already present.
 	 */
 	public boolean add(int value) {
@@ -89,10 +89,10 @@ public class BinarySearchTree {
 
 	/**
 	 * Adds a node into a (non-null) subtree rooted at currentRoot.
-	 * 
+	 *
 	 * @param node The node being inserted.
 	 * @param currentRoot The root of the current subtree where we're adding the node.
-	 * 
+	 *
 	 * @return True if the element was inserted; false if the value was already present.
 	 */
 	private boolean add(Node node, Node currentRoot) {
@@ -126,9 +126,9 @@ public class BinarySearchTree {
 
 	/**
 	 * Returns true if a given value is contained in the tree.
-	 * 
+	 *
 	 * @param value The value being checked for containment.
-	 * 
+	 *
 	 * @return True if the value is present; false otherwise.
 	 */
 	public boolean contains(int value) {
@@ -137,11 +137,11 @@ public class BinarySearchTree {
 
 	/**
 	 * Checks if a value is contained in the a subtree rooted at currentRoot.
-	 * 
+	 *
 	 * @param value The value being checked for containment.
 	 * @param currentRoot The root of the current subtree where we're currently checking
 	 *                    the value for containment.
-	 * 
+	 *
 	 * @return True if the value is present; false otherwise.
 	 */
 	public boolean contains(int value, Node currentRoot) {
@@ -162,7 +162,7 @@ public class BinarySearchTree {
 
 	/**
 	 * Returns the minimum value of the tree.
-	 * 
+	 *
 	 * @return The minimum value of the tree, or -1 if the tree is empty.
 	 */
 	public int minimumValue() {
@@ -178,9 +178,9 @@ public class BinarySearchTree {
 	/**
 	 * Returns the node with the minimum key in the (non-null) subtree
 	 * rooted at currentRoot.
-	 * 
+	 *
 	 * @param currentRoot The root of the subtree that contains the minimum node.
-	 * 
+	 *
 	 * @return The node with the minimum key in the (non-null) subtree
 	 *         rooted at currentRoot.
 	 */
@@ -194,7 +194,7 @@ public class BinarySearchTree {
 
 	/**
 	 * Returns the maximum value of the tree.
-	 * 
+	 *
 	 * @return The maximum value of the tree, or -1 if the tree is empty.
 	 */
 	public int maximumValue() {
@@ -210,9 +210,9 @@ public class BinarySearchTree {
 	/**
 	 * Returns the node with the maximum key in the (non-null) subtree
 	 * rooted at currentRoot.
-	 * 
+	 *
 	 * @param currentRoot The root of the subtree that contains the maximum node.
-	 * 
+	 *
 	 * @return The node with the maximum key in the (non-null) subtree
 	 *         rooted at currentRoot.
 	 */
@@ -226,9 +226,9 @@ public class BinarySearchTree {
 
 	/**
 	 * Removes an element from the tree.
-	 * 
+	 *
 	 * @param value Value to be removed from the tree.
-	 * 
+	 *
 	 * @return True if the value was removed; false if the value was not found.
 	 */
 	public boolean remove(int value) {
@@ -237,11 +237,11 @@ public class BinarySearchTree {
 
 	/**
 	 * Removes an element from the tree.
-	 * 
+	 *
 	 * @param value Value to be removed from the tree.
 	 * @param currentRoot Root of the current subtree where we're removing the value.
 	 * @param currentParent Parent of the currentRoot (null if currentRoot is the root).
-	 * 
+	 *
 	 * @return True if the value was removed; false if the value was not found.
 	 */
 	private boolean remove(int value, Node currentRoot, Node currentParent) {
@@ -302,7 +302,7 @@ public class BinarySearchTree {
 
 	/**
 	 * Returns true if and only if the parent links of all nodes are correct.
-	 * 
+	 *
 	 * @return True iff the parent links of all nodes are correct.
 	 */
 	/* UNCOMMENT AFTER YOU IMPLEMENT THE PARENT LINKS
@@ -323,7 +323,7 @@ public class BinarySearchTree {
 	 * Helper method for the testParentLinks() function.
 	 * Returns true if and only if the parent links of all nodes in the tree rooted at the specified node
 	 * are correct.
-	 * 
+	 *
 	 * @param currentRoot Root of the tree.
 	 * @return True iff the parent links of all nodes in the tree rooted at currentRoot are correct.
 	 */
@@ -348,14 +348,14 @@ public class BinarySearchTree {
 		return true;
 	}
 	*/
-    
+
     /**
      * Draws the tree starting at the root
      */
     public void drawTree(){
         drawTree(root, "");
     }
-    
+
     /** Draws the tree following a pre-order traversal starting at
      * currentRoot
      *
@@ -384,7 +384,7 @@ public class BinarySearchTree {
 
 	/**
 	 * Prints a subtree in-order with indentation.
-	 * 
+	 *
 	 * @param currentRoot The subtree being printed.
 	 * @param indentLevel The level of indentation in which this subtree should be printed.
 	 */
